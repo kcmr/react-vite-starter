@@ -10,7 +10,7 @@ It's **based on [Vital](https://github.com/jvidalv/vital)** with some modificati
 - Jest setup (Testing Library)
 - ESLint
 - Prettier
-- Git hooks powered by simple-git-hooks
+- Git hooks powered by [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks)
 - lint-staged
 - Vite with ESLint and Prettier checker
 - Import aliases
