@@ -2,24 +2,41 @@
   "name": "react-vite-starter",
   "version": "1.0.0",
   "description": "Starter template for Vite with React (TypeScript), CSS-Modules and Jest with @react/testing-library. Based on Vital (https://github.com/jvidalv/vital)",
-  "license": "MIT",
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not IE 11"
+  "keywords": [
+    "vite",
+    "template",
+    "scaffold",
+    "starter",
+    "react",
+    "typescript",
+    "jest",
+    "testing-library",
+    "postcss",
+    "eslint",
+    "prettier"
   ],
-  "engines": {
-    "node": ">=16",
-    "yarn": ">=1.22.5"
+  "homepage": "https://github.com/kcmr/react-vite-starter#readme",
+  "bugs": {
+    "url": "https://github.com/kcmr/react-vite-starter/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kcmr/react-vite-starter.git"
+  },
+  "license": "MIT",
+  "author": "Kus Cámara",
   "scripts": {
-    "start": "vite",
     "prebuild": "rimraf dist",
     "build": "vite build",
-    "test": "jest --coverage",
     "format": "prettier . --write",
     "lint": "eslint . --ignore-path .gitignore --color --no-error-on-unmatched-pattern --max-warnings 0",
-    "lint:fix": "eslint . --ignore-path .gitignore --fix --no-error-on-unmatched-pattern"
+    "lint:fix": "eslint . --ignore-path .gitignore --fix --no-error-on-unmatched-pattern",
+    "start": "vite",
+    "test": "jest --coverage"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm t"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -29,10 +46,11 @@
       "prettier --write"
     ]
   },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "pre-push": "npm t"
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not IE 11"
+  ],
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -64,5 +82,9 @@
     "vite": "^2.6.10",
     "vite-plugin-checker": "^0.3.4",
     "vite-preset-react": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=16",
+    "yarn": ">=1.22.5"
   }
 }
