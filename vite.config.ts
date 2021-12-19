@@ -10,6 +10,7 @@ export default defineConfig((configEnv) => {
     plugins: [
       react(),
       checker({
+        overlay: false,
         typescript: true,
         eslint: {
           files: ['./src'],
